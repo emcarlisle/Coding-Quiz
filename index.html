@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="./assets/style.css">
-    <link rel="./assets/script.js">
+    <link rel="./Assets/style.css">
 </head>
-<body>
-    <section class="container">
-        <h1>Coding Quiz Challenge</h1>
-        <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score time by ten seconds!</p>
-        <input class="btn btn-primary" id="startQuiz" type="submit" value="Start Quiz">
+
+<body class="d-flex flex-column h-100">
+    <header class="header">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="nav d-flex justify-content-between">
+                    <input class="btn btn-primary" id="highscores" type="submit" value="View Highscores">
+                    <input class="btn btn-primary" id="timer" type="submit" value="Timer">
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="container mt-5 pb-3">
+        <div class="row justify-content-center">
+            <div class="col-md-6 bg-light border p-lg-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="border-bottom pb-3">Coding Quiz Challenge</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="text">
+                            <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score time by ten seconds!</p>
+                        </div>
+                        <div class="text">
+                            <input class="btn btn-primary" id="startQuiz" type="submit" value="Start Quiz">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!--Link to JavaScript-->
+    <script src="./Assets/script.js"></script>
 </body>
 </html>
