@@ -14,43 +14,52 @@
             <div class="col-md-12">
                 <nav class="nav d-flex justify-content-between">
                     <input class="btn btn-primary" id="highscores" type="submit" value="View Highscores">
-                    <input class="btn btn-primary" id="timer" type="submit" value="Timer">
+                    <p id="timer" value="Timer"></p>
                 </nav>
             </div>
         </div>
     </header>
-    <section class="container mt-5 pb-3">
-        <div class="row justify-content-center">
-            <div class="col-md-6 bg-light border p-lg-3">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="border-bottom pb-3">Coding Quiz Challenge</h3>
+    <section id="startPage" class="row justify-content-center">
+        <div class="col-md-5 bg-light border p-lg-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="border-bottom pb-3">Coding Quiz Challenge</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="direction">
+                        <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score time by ten seconds!</p>
                     </div>
-                    <div class="col-md-12">
-                        <div class="text justify-content-center">
-                            <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score time by ten seconds!</p>
-                        </div>
-                        <div class="text justify-content-center">
-                            <input class="btn btn-primary" id="startQuiz" type="submit" value="Start Quiz">
-                        </div>
+                    <div class="direction">
+                        <input id="startQuiz" class="btn btn primary" type="submit" value="Start Quiz">
                     </div>
                 </div>
             </div>
         </div>
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <ol>
-                    <li><button class="btn">Answer 1</button></li>
-                    <li><button class="btn">Answer 2</button></li>
-                    <li><button class="btn">Answer 3</button></li>
-                    <li><button class="btn">Answer 4</button></li>
-                </ol>
+    </section>
+        <!--question section-->
+    <section id="questionsSection" class="hide row justify-content-center">
+        <div class="col-md-5 bg-light border p-lg-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 id="questionHeader" class="border-bottom pb-3">Question 1</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="text">
+                        <p id="question">Question Here</p>
+                    </div>
+                    <div id="answers" class="text">
+                        <ol>
+                            <li><button class="btn">Answer 1</button></li>
+                            <li><button class="btn">Answer 2</button></li>
+                            <li><button class="btn">Answer 3</button></li>
+                            <li><button class="btn">Answer 4</button></li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
-    <!--Link to JavaScript-->
-    <script src="./Assets/script.js"></script>
+    <!--Lin to JavaScript-->
+    <scriptsrc="./Assets/script.js"></script>
 </body>
 </html>

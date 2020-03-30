@@ -1,11 +1,15 @@
 h3 {
-    text-align: center;
+    justify-content: center;
+}
+
+.direction {
+    justify-content: center;
 }
 
 p {
-    text-align: center;
-}
-
-.text {
-    text-align: center;
+     justify-content: center;
+ }
+.hide {
+    display: none;
+    visibility: hidden;
 }
