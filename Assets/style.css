@@ -1,14 +1,11 @@
 h3 {
-    justify-content: center;
+    text-align: center;
 }
 
 .direction {
-    justify-content: center;
+    text-align: center;
 }
 
-p {
-     justify-content: center;
- }
 .hide {
     display: none;
     visibility: hidden;
