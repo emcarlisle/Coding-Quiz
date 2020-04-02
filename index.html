@@ -28,39 +28,43 @@
                             <p> Try to answer the following code-related questions within the time limit. Incorrect answers will penalize your score time by ten seconds!</p>
                         </div>
                         <div class="direction">
-                            <button id="start" class="btn btn primary" type="submit" value="Start Quiz">
+                            <input id="start" class="btn btn primary" type="submit" value="Start Quiz">
                         </div>
                     </div>
                 </div>
             </div>
         </div>  
     </section>
-            
-                
-        <!--question section-->
+        
+    <!--question section-->
     <section id="questionsSection" class="hide row justify-content-center">
         <div class="col-md-5 bg-light border p-lg-3">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 id="questionHeader" class="border-bottom pb-3">Question 1</h3>
+                    <h3 id="questionHeader" class="border-bottom pb-3">Question</h3>
                 </div>
                 <div class="col-md-12">
                     <div class="direction">
                         <p id="question">Question Here</p>
                     </div>
-                    <div id="answers" class="direction">
+                    <div id ="answers" class="direction">
                         <ol>
-                            <li><button class="btn">Answer 1</button></li>
-                            <li><button class="btn">Answer 2</button></li>
-                            <li><button class="btn">Answer 3</button></li>
-                            <li><button class="btn">Answer 4</button></li>
+                            <li><button id="choice1"></button></li>
+                            <li><button id="choice2"></button></li>
+                            <li><button id="choice3"></button></li>
+                            <li><button id="choice4"></button></li>
                         </ol>
+                    </div>
+                    <div>
+                        <p id="correct"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+                        
     <!--Link to JavaScript-->
     <script src="./Assets/script.js"></script>
 </body>
 </html>
+            
