@@ -1,12 +1,13 @@
 var startQuiz = document.getElementById("start");
 var start = document.getElementById("startScreen");
 var questionsScreen = document.getElementById("questionsScreen");
+var questionTitle = document.getElementById("question-title")
 var options = document.getElementById("options")
 var choice1 = document.getElementById("choice1");
 var choice2 = document.getElementById("choice2");
 var choice3 = document.getElementById("choice3");
 var choice4 = document.getElementById("choice4");
-var correct = document.getElementById("correctAnswer");
+var answer = document.getElementById("answer");
 var highscore = document.getElementById("highscores");
 var time = document.getElementById("time");
 
@@ -31,11 +32,6 @@ var interval;
 startQuiz.addEventListener("click", function(){
     startScreen.classList.add("d-none");
     questionContainer.classList.remove("d-none");
-    if (start.style.display === "none") {
-        start.style.display = "block";
-      } else {
-        start.style.display = "none";
-    }
     generateQuestion(currentIndex);
     timer();
     enableClicks();
@@ -96,19 +92,19 @@ function generateQuiz(UserChoice) {
     generateQuestion(currentIndex);
 }
 
-var question [
-    {
-        question: 'Which of the following function of String object combines the text of two strings and returns a new string?',
-        options: {
-            choice1: 'add()',
-            choice2: 'merge()',
-            choice3: 'concat()',
-            choice4: 'append()',
-        },
-        correct: 
-        
-    }
-]
+//var question [
+//    {
+//        question: 'Which of the following function of String object combines the text of two strings and returns a new string?',
+//        options: {
+//            choice1: 'add()',
+//            choice2: 'merge()',
+//            choice3: 'concat()',
+//            choice4: 'append()',
+//        },
+//        correct: 
+//        
+//    }
+//]
 
 
 //var startPage = document.getElementById("startpage");
