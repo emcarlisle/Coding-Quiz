@@ -96,12 +96,19 @@ function generateQuiz(UserChoice) {
     generateQuestion(currentIndex);
 }
 
-//var question [
-//    {
-//
-//        
-//    }
-//]
+var question [
+    {
+        question: 'Which of the following function of String object combines the text of two strings and returns a new string?',
+        options: {
+            choice1: 'add()',
+            choice2: 'merge()',
+            choice3: 'concat()',
+            choice4: 'append()',
+        },
+        correct: 
+        
+    }
+]
 
 
 //var startPage = document.getElementById("startpage");
