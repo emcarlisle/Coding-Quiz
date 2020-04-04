@@ -9,7 +9,6 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    
     <header>
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
@@ -38,31 +37,33 @@
     </section>
         
     <!--question section-->
-    <section id="questionsScreen" class="hide row justify-content-center">
-        <div class="col-md-5 bg-light border p-lg-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 id="questionHeader" class="border-bottom pb-3">Question</h3>
-                </div>
-                <div class="col-md-12">
-                    <div class="direction">
-                        <p id="question">Question Here</p>
+    <div id="questionContainer" class ="d-none">
+        <section id="questionsScreen" class="row justify-content-center">
+            <div class="col-md-5 bg-light border p-lg-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 id="questionHeader" class="border-bottom pb-3">Question</h3>
                     </div>
-                    <div id ="answers" class="direction">
-                        <ol>
-                            <li><button id="choice1"></button></li>
-                            <li><button id="choice2"></button></li>
-                            <li><button id="choice3"></button></li>
-                            <li><button id="choice4"></button></li>
-                        </ol>
-                    </div>
-                    <div>
-                        <p id="correct"></p>
+                    <div class="col-md-12">
+                        <div class="direction">
+                            <p id="question">Question Here</p>
+                        </div>
+                        <div id ="options" class="direction">
+                            <ol>
+                                <li><button id="choice1"></button></li>
+                                <li><button id="choice2"></button></li>
+                                <li><button id="choice3"></button></li>
+                                <li><button id="choice4"></button></li>
+                            </ol>
+                        </div>
+                        <div>
+                            <p id="correctAnswer"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
                         
     <!--Link to JavaScript-->
     <script src="./Assets/script.js"></script>
