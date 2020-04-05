@@ -1,34 +1,25 @@
+// access to html elements
 var startQuiz = document.getElementById("start");
 var start = document.getElementById("startScreen");
 var questionsScreen = document.getElementById("questionsScreen");
 var questionTitle = document.getElementById("question-title")
 var options = document.getElementById("options")
-var choice1 = document.getElementById("choice1");
-var choice2 = document.getElementById("choice2");
-var choice3 = document.getElementById("choice3");
-var choice4 = document.getElementById("choice4");
+var a = document.getElementById("choice1");
+var b = document.getElementById("choice2");
+var c = document.getElementById("choice3");
+var d = document.getElementById("choice4");
 var answer = document.getElementById("answer");
 var highscore = document.getElementById("highscores");
 var time = document.getElementById("time");
 
-//var question = document.getElementById("question");
-//var answers = document.getElementById("answers");
-
+//global variables
 var currentIndex  = 0;
 var currentTime = 75;
 var interval;
 
-
-// I want to start off with start screen displayed and the questionsScreen hidden,
-// when I click start quiz, the start screen disappears and the questions screen displays
-//var start = function() {
-//    questionsScreen.style.display = 'none';
-//}
-//function () {
-//    document.getElementById('questionsScreen').style.visibility ="hidden";
-//}
-//when start button is clicked, I want to trigger the timer function, interval function, 
-//and the function to generate the next question
+// when this button is clicked, this will cause
+// the startScreen to hide and display questions
+// and trigger the timer
 startQuiz.addEventListener("click", function(){
     startScreen.classList.add("d-none");
     questionContainer.classList.remove("d-none");
@@ -36,13 +27,11 @@ startQuiz.addEventListener("click", function(){
     timer();
     enableClicks();
 });
-//document.getElementById('questionsScreen').classList.add("hide");
-    //questionsScreen.style.display = "block";
-   
+// timer function 
 function timer() {
     interval = setInterval(function() {
         time.innerHTML = currentTime--;
-        if(correct === 'Incorrect') {
+        if(answer === 'Incorrect') {
             currentTime = currentTime - 10;
         }
         if(currentTime === -1) {
@@ -50,49 +39,55 @@ function timer() {
         }
     }, 1000)
 }
-
+// function to enable clicks
 function enableClicks() {
-    choice1.addEventListener('click', function() {
-        generateQuiz(choice1);
+    a.addEventListener('click', function() {
+        generateQuiz(a);
     })
-    choice2.addEventListener('click', function() {
-        generateQuiz(choice2);
+    b.addEventListener('click', function() {
+        generateQuiz(b);
     })
-    choice3.addEventListener('click', function() {
-        generateQuiz(choice3);
+    c.addEventListener('click', function() {
+        generateQuiz(c);
     })
-    choice4.addEventListener('click', function() {
-        generateQuiz(choice4);
+    d.addEventListener('click', function() {
+        generateQuiz(d);
     })
 }
 
+// generates the next question
+// after the last question is answered, this function will clear
+// interval and return the time and score
 function generateQuestion(index) {
     if(index === question.length) {
         clearInterval(interval);
         return score.innerHTML = time.innerHTML;
     }
-    questionsScreen.innerHTML = question[index].question;
-    choice1.innerHTML = questions[index].correct.a; 
-    choice2.innerHTML = questions[index].correct.b; 
-    choice3.innerHTML = questions[index].correct.c;
-    choice4.innerHTML = questions[index].correct.d;
+    questionTitle.innerHTML = questions[index].question;
+    a.innerHTML = questions[index].options.a; 
+    b.innerHTML = questions[index].options.b; 
+    c.innerHTML = questions[index].options.c;
+    d.innerHTML = questions[index].options.d;
 }
-
+// ^ this will change the question/answers/correct answer
 
  //main function for the quiz
 function generateQuiz(UserChoice) {
-    var options = question[currentIndex].choice1;
+    var correctAnswer = question[currentIndex].a;
     if(UserChoice.innerHTML === correctAnswer) {
-       options.innerHTML = 'Correct'; 
+       answer.innerHTML = 'Correct'; 
     } else {
-        options.innerHTML = 'Incorrect';
+        answer.innerHTML = 'Incorrect';
         currentTime = currentTime - 10;
     }
     currentIndex++;
     generateQuestion(currentIndex);
 }
+// if user chooses the correct answer, display correct
+// else display incorrect and -10 sec on timer
+//update current index & go back to generateQuestion function
 
-//var question [
+//var questions [
 //    {
 //        question: 'Which of the following function of String object combines the text of two strings and returns a new string?',
 //        options: {
@@ -105,39 +100,3 @@ function generateQuiz(UserChoice) {
 //        
 //    }
 //]
-
-
-//var startPage = document.getElementById("startpage");
-//var questionsSection = document.getElementById("questionsSection");
-//var startTimer = document.getElementById("starttime")
-
-//function quiz() {
-//    document.getElementById('startPage').classList.add("hide");
-//    document.getElementById('questionsSection').classList.remove("hide");
-//}
-//startQuiz.addEventListener("click", quiz);
-//update = setInterval("timer()", 1000); // put function here and not a string
-//    document.getElementById("startPage").classList.add("hide");
-//    document.getElementById("questionsSection").classList.remove("hide");
-/*
-When start quiz button is clicked, a timer starts; 
-Questions with 4 multiple choice answers appear;
-When an answer is selected, the next question will appear
-If wrong answer, -10 secs on the timer
-Once all questions are answered, timer stops.
-Highscore is recorded with a text box to enter intials
-
-render Highscores
-
-List of buttons:
-start quiz
-choice buttons
-view highscores
-submit 
-go back
-clear high scores
-
-list of functions:
-funtion quiz
-function nextQuestion
-function selectAnswer*/
