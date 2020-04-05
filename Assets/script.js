@@ -25,7 +25,7 @@ startQuiz.addEventListener("click", function(){
     startScreen.classList.add("d-none");
     questionContainer.classList.remove("d-none");
     generateQuestion(currentIndex);
-    timer();
+    //interval = setInterval(timer, 1000);
     enableClicks();
 });
 // timer function 
@@ -35,7 +35,7 @@ function timer() {
         if(answer === 'Incorrect') {
             currentTime = currentTime - 10;
         }
-        if(currentTime === -1) {
+        if(currentTime === 0) {
             clearInterval(interval)
         }
     }, 1000)
@@ -99,5 +99,46 @@ var questions = [
         },
         answer: 'concat()'
         
+    },
+    {
+        question: 'Which built-in method returns the length of the string?',
+        options: {
+            a: 'length()',
+            b: 'size()',
+            c: 'index()',
+            d: 'None of the above()',
+        },
+        answer: 'length()'
+    },
+    {
+        question: 'Which of the following are capabilities of functions in JavaScript?',
+        options: {
+            a: 'Return a value',
+            b: 'Accept parameters and Return a value',
+            c: 'Accept arameters',
+            d: 'None of the above()',
+        },
+        answer: 'Accept parameters'
+    },
+    {
+        question: 'What is the correct JavaScript syntax to write "Hello World"?',
+        options: {
+            a: 'console.log("Hello World")',
+            b: 'printIn ("Hello World)',
+            c: 'document.write("Hello World)',
+            d: 'response.write("Hello World)',
+        },
+        answer: 'document.write("Hello World)'
+    },
+    {
+        question: 'Which of the following is not considered a JavaScript operator?',
+        options: {
+            a: 'new',
+            b: 'this',
+            c: 'delete',
+            d: 'typeOf',
+        },
+        answer: 'this'
     }
+    
 ]
