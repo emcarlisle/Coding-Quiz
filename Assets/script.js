@@ -73,7 +73,7 @@ function generateQuestion(index) {
 
  //main function for the quiz
 function generateQuiz(UserChoice) {
-    var correctAnswer = question[currentIndex].a;
+    let correctAnswer = questions[currentIndex].answer;
     if(UserChoice.innerHTML === correctAnswer) {
        answer.innerHTML = 'Correct'; 
     } else {
@@ -87,16 +87,16 @@ function generateQuiz(UserChoice) {
 // else display incorrect and -10 sec on timer
 //update current index & go back to generateQuestion function
 
-//var questions [
-//    {
-//        question: 'Which of the following function of String object combines the text of two strings and returns a new string?',
-//        options: {
-//            choice1: 'add()',
-//            choice2: 'merge()',
-//            choice3: 'concat()',
-//            choice4: 'append()',
-//        },
-//        correct: 
-//        
-//    }
-//]
+var questions = [
+    {
+        question: 'Which of the following function of String object combines the text of two strings and returns a new string?',
+        options: {
+            a: 'add()',
+            b: 'merge()',
+            c: 'concat()',
+            d: 'append()',
+        },
+        answer: 'concat()'
+        
+    }
+]
