@@ -12,7 +12,8 @@ var answer = document.getElementById("answer");
 var score = document.getElementById("final-score");
 //var highscore = document.getElementById("highscores");
 var time = document.getElementById("time");
-var endGame = document.getElementById("end-screen")
+var endGame = document.getElementById("end-screen");
+var submit = document.getElementById("submit")
 
 //global variables
 var currentIndex  = 0;
@@ -26,6 +27,7 @@ startQuiz.addEventListener("click", function(){
     startScreen.classList.add("d-none");
     questionContainer.classList.remove("d-none");
     generateQuestion(currentIndex);
+    timer();
     //interval = setInterval(timer, 1000);
     enableClicks();
 });
