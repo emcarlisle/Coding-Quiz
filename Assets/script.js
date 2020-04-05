@@ -3,13 +3,14 @@ var startQuiz = document.getElementById("start");
 var start = document.getElementById("startScreen");
 var questionsScreen = document.getElementById("questionsScreen");
 var questionTitle = document.getElementById("question-title")
-var options = document.getElementById("options")
+//var options = document.getElementById("options")
 var a = document.getElementById("choice1");
 var b = document.getElementById("choice2");
 var c = document.getElementById("choice3");
 var d = document.getElementById("choice4");
 var answer = document.getElementById("answer");
-var highscore = document.getElementById("highscores");
+var score = document.getElementById("final-score");
+//var highscore = document.getElementById("highscores");
 var time = document.getElementById("time");
 
 //global variables
@@ -59,7 +60,7 @@ function enableClicks() {
 // after the last question is answered, this function will clear
 // interval and return the time and score
 function generateQuestion(index) {
-    if(index === question.length) {
+    if(index === questions.length) {
         clearInterval(interval);
         return score.innerHTML = time.innerHTML;
     }
