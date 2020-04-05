@@ -12,6 +12,7 @@ var answer = document.getElementById("answer");
 var score = document.getElementById("final-score");
 //var highscore = document.getElementById("highscores");
 var time = document.getElementById("time");
+var endGame = document.getElementById("end-screen")
 
 //global variables
 var currentIndex  = 0;
@@ -62,6 +63,8 @@ function enableClicks() {
 function generateQuestion(index) {
     if(index === questions.length) {
         clearInterval(interval);
+        questionContainer.classList.add("d-none");
+        endGame.classList.remove("d-none");
         return score.innerHTML = time.innerHTML;
     }
     questionTitle.innerHTML = questions[index].question;
